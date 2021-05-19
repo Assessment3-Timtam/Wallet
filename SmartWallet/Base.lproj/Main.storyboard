@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VIh-zP-Kzk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="dIj-FR-dpt">
+            <objects>
+                <viewController id="n0B-MW-c72" customClass="MainVC" customModule="SmartWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lN1-3b-fnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEc-zm-04U">
+                                <rect key="frame" x="20" y="239" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Currency Rate Page"/>
+                                <connections>
+                                    <action selector="currencyRateBtnClicked:" destination="n0B-MW-c72" eventType="touchUpInside" id="d68-JY-Hft"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5L3-WK-r8g">
+                                <rect key="frame" x="20" y="328" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="My Wallet"/>
+                                <connections>
+                                    <action selector="myWalletBtnClicked:" destination="n0B-MW-c72" eventType="touchUpInside" id="NKo-IJ-aBN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFu-wg-6ip">
+                                <rect key="frame" x="114" y="152" width="187" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="trB-M0-rL3"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="HEc-zm-04U" firstAttribute="top" secondItem="nFu-wg-6ip" secondAttribute="bottom" constant="50" id="0RX-QR-DcU"/>
+                            <constraint firstItem="5L3-WK-r8g" firstAttribute="leading" secondItem="trB-M0-rL3" secondAttribute="leading" constant="20" id="BCV-IY-JTA"/>
+                            <constraint firstItem="nFu-wg-6ip" firstAttribute="top" secondItem="trB-M0-rL3" secondAttribute="top" constant="64" id="Q4e-M6-Og1"/>
+                            <constraint firstItem="trB-M0-rL3" firstAttribute="trailing" secondItem="HEc-zm-04U" secondAttribute="trailing" constant="20" id="Szq-7m-Pzg"/>
+                            <constraint firstItem="HEc-zm-04U" firstAttribute="leading" secondItem="trB-M0-rL3" secondAttribute="leading" constant="20" id="XHD-y4-7R9"/>
+                            <constraint firstItem="trB-M0-rL3" firstAttribute="trailing" secondItem="5L3-WK-r8g" secondAttribute="trailing" constant="20" id="bjh-0O-0w6"/>
+                            <constraint firstItem="trB-M0-rL3" firstAttribute="trailing" secondItem="nFu-wg-6ip" secondAttribute="trailing" constant="113" id="nuJ-zx-UPN"/>
+                            <constraint firstItem="nFu-wg-6ip" firstAttribute="leading" secondItem="trB-M0-rL3" secondAttribute="leading" constant="114" id="qcQ-eV-9ki"/>
+                            <constraint firstItem="5L3-WK-r8g" firstAttribute="top" secondItem="HEc-zm-04U" secondAttribute="bottom" constant="50" id="yzt-sw-Lr2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xFG-2y-7g6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b53-sM-rKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189.8550724637685" y="26.785714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qkZ-IW-Rwy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VIh-zP-Kzk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gCc-1H-gCr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n0B-MW-c72" kind="relationship" relationship="rootViewController" id="trh-b3-vIT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kds-FY-kfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279.7101449275365" y="26.785714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
